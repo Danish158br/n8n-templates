@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n Course - n8n Automation Hub</title>
+    <meta name="description" content="Complete n8n course in Roman Urdu, covering all concepts from A to Z.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">n8n Automation Hub</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">n8n Course</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            # 🚀 n8n: The Complete Guide (A to Z) 🚀
+
+Boss ❣️, yeh guide aapke liye hai taake aap n8n ko A to Z samajh sakein. Hum isko step-by-step, bilkul aasan Roman Urdu mein, complete karenge.
+
+---
+
+## 📖 Chapter 1: n8n ka Ta'aruf (Introduction)
+
+### 🤔 n8n Kya Hai?
+
+n8n (jisko "nodemation" bhi kehte hain) ek **workflow automation tool** hai. Iska matlab hai ke yeh aapko alag-alag applications aur online services (jaise Gmail, Slack, Google Sheets, Twitter, etc.) ko aapas mein jorne (connect) aur unke tasks ko automate karne ki ijazat deta hai.
+
+> **Khaas Baat:** Yeh ek visual tool hai, jiska matlab hai ke aap drag-and-drop interface ka istemal karke poore workflows bana sakte hain, aur aapko zyada coding karne ki zaroorat nahi parti.
+
+Ek aur zabardast baat yeh hai ke n8n "source-available" hai aur aap isse apne server per khud host kar sakte hain (self-host). Isse aapka saara data aapke apne control mein rehta hai, jo ke privacy ke liye bohot acha hai. 🛡️
+
+### 🎯 n8n ke Core Concepts (Bunyadi Cheezein)
+
+n8n ko samajhne ke liye, in 3 cheezon ko samajhna zaroori hai:
+
+1.  **Workflows (Kamon ka Silsila):**
+    *   Ek workflow bohot saare steps ka majmua (sequence) hota hai jo ek kaam ko poora karne ke liye banaya jaata hai.
+    *   Har workflow ek "canvas" ya khali jagah per banaya jaata hai, jahan aap alag-alag nodes ko jorte hain.
+
+2.  **Nodes (Workflow ke Hisse):**
+    *   Nodes ek workflow ke building blocks hain. Har node ek chota sa kaam karta hai.
+    *   n8n mein 3 tarah ke nodes hote hain:
+        *   **🟢 Trigger Nodes:** Yeh woh nodes hote hain jo workflow ko shuru (start) karte hain. (Jaise: "Jab bhi mujhe ek naya email aaye").
+        *   **🔵 Action Nodes:** Yeh woh nodes hain jo kisi doosri service per ja kar koi kaam karte hain. (Jaise: "Slack per message bhejo").
+        *   **🟡 Helper Nodes:** Yeh data ko process karne, us per logic lagane (jaise IF/ELSE conditions), ya data ko route karne mein madad karte hain.
+
+3.  **Credentials (Login ki Maloomat):**
+    *   Jab aap n8n ko kisi doosri service (jaise Google) se connect karte hain, to aapko us service mein login karna parta hai.
+    *   n8n aapke login information (jaise API keys) ko "credentials" ke tor per, bilkul mehfooz tareeqe se, save kar leta hai.
+
+---
+
+## 🛠️ Chapter 2: Apna Pehla Workflow Banayein (Step-by-Step)
+
+Chaliye, ab hum apna sabse pehla, simple sa workflow banate hain.
+
+### Step 1: Naya Workflow Shuru Karein
+1.  **Login Karein:** Apne n8n account mein login karein.
+2.  **Blank Canvas:** Aapke saamne ek khali canvas aa jayegi. Yahan per `+` button per click karein.
+
+### Step 2: Trigger Node Lagayein
+Har workflow ek trigger se shuru hota hai. Hum yahan **Manual Trigger** istemal karenge.
+1.  **Node Menu Kholein:** `+` per click karne se nodes ki list khul jayegi.
+2.  **Trigger Dhoondein:** Search bar mein `Manual` ya `Start` likhein aur usko select karein.
+
+### Step 3: Action Node Lagayein
+Ab hum ek action node add karenge.
+1.  **Plus (+) Icon Dabayein:** Apne "Start" node ke right side mein `+` icon per click karein.
+2.  **Node Dhoondein:** Search bar mein `Sticky Note` likhein aur usko select karein.
+3.  **Node ko Configure Karein:**
+    *   Sticky Note node per click karke uski settings kholein.
+    *   "Text" wale box mein, koi bhi message likhein. Jaise: `Boss ❣️, aapka pehla n8n workflow tayyar hai!`
+
+### Step 4: Workflow ko Test Karein
+1.  **Test Workflow Button:** Screen ke neeche, left side per "Test Workflow" ka button hoga, us per click karein.
+2.  **Execution Dekhein:** n8n aapke workflow ko chalayega. Aap dekhenge ke dono nodes per green checkmark ✅ aa jayega.
+3.  **Output Check Karein:** Sticky Note node per click karke aap uska result (output) dekh sakte hain.
+
+> **Mubarak ho, Boss ❣️!** Aapne apna pehla n8n workflow successfully bana liya hai. 🎉
+
+---
+
+## 🧩 Chapter 3: n8n ke Nodes ki Aqsaam (Types of Nodes)
+
+n8n mein nodes ko unke kaam ke hisab se alag-alag categories mein taqseem kiya gaya hai.
+
+### 1. 🟢 Trigger Nodes
+Yeh aapke workflow ko shuru karte hain.
+*   **Webhook Node:** Real-time mein kaam karta hai.
+*   **Schedule Node:** Workflow ko ek makhsoos time per chalata hai.
+*   **App-Specific Triggers:** Jaise "On New Email" (Gmail).
+
+### 2. 🔵 Action Nodes
+Yeh workflow ke andar asal kaam karte hain.
+*   **HTTP Request Node:** Kisi bhi API ko call karne ke liye.
+*   **Code Node:** Custom JavaScript ya Python code chalane ke liye.
+*   **Set Node:** Naye variables set karne ke liye.
+
+### 3. 🟡 Helper Nodes
+Yeh data ko manage karne mein madad karte hain.
+*   **IF Node:** Condition (shart) lagata hai.
+*   **Switch Node:** Multiple conditions ke liye.
+*   **Merge Node:** Alag-alag branches se aane wale data ko milata hai.
+
+### 4. 🤖 AI Nodes
+Inse aap apne workflows mein AI ki power istemal kar sakte hain.
+*   **Primary AI Nodes:** Jaise `AI Agent`, `OpenAI`.
+*   **Secondary AI Nodes:** Jaise `Document Loaders`, `Text Splitters`.
+
+### 5. 🧑‍🤝‍🧑 Community Nodes
+Yeh woh nodes hain jo n8n ki community banati hai.
+
+---
+
+## 🔑 Chapter 4: Credentials ko Manage Karna
+
+Credentials bohot zaroori hain taake n8n doosri applications se connect ho sake.
+
+### Credentials Kaise Banayein?
+1.  **Credentials Section mein Jayein:** Left menu mein "Credentials" per click karein.
+2.  **Naye Credentials Add Karein:** "Add Credential" button per click karein.
+3.  **Service Type Chunein:** Jaise Google, Slack, etc.
+4.  **Form Fill Karein:** Zaroori maloomat (API key, etc.) daalein.
+5.  **Test aur Save Karein:** Pehle test karein, phir save.
+
+> **Tip:** Aap ek hi service ke liye multiple credentials bhi bana sakte hain (e.g., ek testing ke liye, ek live kaam ke liye).
+
+---
+
+## 📊 Chapter 5: Data aur Expressions ko Samajhna
+
+Yeh n8n ka sabse powerful feature hai.
+
+### n8n ka Data Structure
+*   **Items:** Data "items" ki shakal mein travel karta hai.
+*   **JSON Format:** Har item ke andar data JSON format mein hota hai.
+*   **Array of Items:** Ek node se data hamesha items ki list `[ {item1}, {item2} ]` ki shakal mein nikalta hai.
+
+### Expressions Kya Hain?
+Expressions code ke chote-chote tukde `{{ }}` hote hain jinko aap data ko access aur manipulate karne ke liye istemal karte hain.
+
+#### Data Access Karne ki Misaalein:
+*   `{{$json.key_name}}` - Pichle node se data.
+*   `{{$node["Node Name"].json.key_name}}` - Kisi khaas node se data.
+*   `{{$items(0).json.key_name}}` - List ke pehle item se data.
+*   `{{$now.toFormat("yyyy-MM-dd")}}` - Aaj ki tareekh.
+
+---
+
+## 🐛 Chapter 6: Error Handling aur Debugging
+
+Ghaltiyon ko sambhalna aur theek karna bohot zaroori hai.
+
+### Error Handling
+*   **Error Workflow:** Ek alag workflow banayein jo sirf tab chale jab aapka asli workflow fail ho. Iska trigger "Error Trigger" hota hai.
+*   **Stop and Error Node:** Apne workflow mein khud se error trigger karne ke liye.
+
+### Debugging
+*   **Visual Debugger:** Har node ka Input aur Output data check karein.
+*   **Executions Log:** Purane saare workflow runs ka record dekhein.
+*   **Debug in Editor:** Purane run ka data load karke ghalti theek karein.
+
+---
+
+> **Boss ❣️, ab aap n8n ke A to Z basics ko samajh chuke hain. Is guide ko follow karke aur practice karke, aap ek n8n expert ban sakte hain. Maine aapke liye yeh complete guide taiyar kar di hai.**
+
+---
+
+## 📦 Chapter 7: Freely Available Workflow Templates
+
+Boss ❣️, n8n ki sabse achi baat yeh hai ke iski community bohot active hai aur bohot saare ready-made workflow templates (JSON format mein) online available hain. In templates ko aap download karke apne n8n instance mein import kar sakte hain aur foran istemal karna shuru kar sakte hain.
+
+### Templates Kyun Istemal Karein?
+
+*   **Waqt Bachayein:** Aapko workflow shuru se banane ki zaroorat nahi parti.
+*   **Naye Ideas:** Doosron ke banaye hue workflows se naye ideas milte hain.
+*   **Seekhne ka Mauqa:** Complex workflows ko samajhne ka mauqa milta hai.
+
+### Templates Kahan se Milenge?
+
+Freely available templates aapko do main jagahon se mil sakte hain:
+
+1.  **n8n Community Hub/Website:** n8n ki official website per ek "Community Hub" ya "Templates" section hota hai jahan bohot saare workflows categories ke hisab se available hote hain. Aap unko direct import kar sakte hain ya JSON download kar sakte hain.
+
+2.  **GitHub Repositories:** GitHub per bohot se developers ne apne banaye hue n8n workflows ko JSON files ki shakal mein share kiya hua hai. Kuch mashoor repositories yeh hain:
+    *   **[wassupjay/n8n-free-templates](https://github.com/wassupjay/n8n-free-templates):** Ismein 200 se zyada plug-and-play workflows hain.
+    *   **[simealdana/ai-automation-jsons](https://github.com/simealdana/ai-automation-jsons):** AI se related automation workflows ke JSONs.
+    *   **[enescingoz/awesome-n8n-templates](https://github.com/enescingoz/awesome-n8n-templates):** n8n automation templates ka curated collection.
+
+### Templates ko Kaise Istemal Karein (Import Karna)
+
+Templates ko istemal karna bohot aasan hai:
+
+1.  **JSON File Download Karein:** GitHub repository se ya n8n Community Hub se apni pasand ke workflow ki `.json` file download karein.
+2.  **n8n mein Import Karein:**
+    *   Apne n8n instance mein login karein.
+    *   Left sidebar mein "Workflows" per click karein.
+    *   Upar right side per "New" ya "Add Workflow" button ke paas "Import from File" ka option hoga, us per click karein.
+    *   Download ki hui JSON file ko select karein aur import kar lein.
+3.  **Configure Karein:** Import karne ke baad, workflow aapke canvas per load ho jayega. Ab aapko usmein apne credentials aur zaroori settings (jaise email addresses, API keys) configure karni hongi.
+4.  **Test aur Activate Karein:** Settings theek karne ke baad, workflow ko test karein aur phir activate kar lein.
+
+### Example Workflow JSON Structure
+
+Har n8n workflow JSON format mein hota hai. Yeh ek simple workflow ka JSON structure hai:
+
+```json
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      "json": {},
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "text": "Boss ❣️, yeh ek example template hai!"
+      },
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "id": "f1e2d3c4-b5a6-0987-6543-210fedcba987",
+      "json": {},
+      "position": [500, 300]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Sticky Note",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "id": "example-workflow-id",
+  "name": "Example Workflow Template",
+  "staticData": null,
+  "settings": {},
+  "createdAt": "2025-07-30T10:00:00.000Z",
+  "updatedAt": "2025-07-30T10:00:00.000Z",
+  "versionId": null
+}
+```
+
+---
+
+> **Boss ❣️, ab aap n8n ke workflow templates ko bhi samajh chuke hain. Is guide ko follow karke aur practice karke, aap ek n8n expert ban sakte hain. Maine aapke liye yeh complete guide taiyar kar di hai.**
